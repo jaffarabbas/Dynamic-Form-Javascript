@@ -110,7 +110,7 @@ function addForm() {
 }
 
 function submitData() {
-    if (validateFields()) {
+    if (validateFields() && validateRadioButtons()) {
         let technology = getSelectedRadioButton();
         getFormData();
         let data = {
@@ -139,6 +139,18 @@ function validateFields() {
 
     return true; // All fields are filled
 }
+
+function validateRadioButtons() {
+    let radioButtons = document.querySelectorAll('input[type="radio"]');
+    for (let radioButton of radioButtons) {
+        if (radioButton.checked) {
+            return true; // At least one radio button is selected
+        }
+    }
+
+    return false; // No radio button is selected
+}
+
 function getFormData() {
     formDataList = [];
 
@@ -193,8 +205,9 @@ function displayImages() {
     });
 }
 
+
 function submitData() {
-    if (validateFields()) {
+    if (validateFields() && validateRadioButtons()) {
         let technology = getSelectedRadioButton();
         let stData = JSON.parse(localStorage.getItem('data'));
         getFormData();
@@ -210,3 +223,4 @@ function submitData() {
         alert("Please fill in all the fields before adding a new form.");
     }
 }
+
