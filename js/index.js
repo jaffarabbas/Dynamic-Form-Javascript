@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Open the modal
-    // myModal.show();
+    myModal.show();
     formCreation();
 });
 
