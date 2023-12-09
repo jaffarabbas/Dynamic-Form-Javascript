@@ -1,0 +1,36 @@
+.formDesign{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    row-gap: 0px;
+    padding: 20px 0px;
+}
+
+#formDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 10px;
+    padding: 0px 20px;
+    overflow-y: scroll;
+}
+
+#imageDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+    padding: 10px 20px;
+    overflow-y: scroll;
+
+}
+
+.imgCard{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    row-gap: 10px;
+    padding: 5px
+}
